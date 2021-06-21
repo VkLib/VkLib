@@ -1,0 +1,1 @@
+add_library(VkLib main.cpp)
