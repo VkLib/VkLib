@@ -1,1 +1,6 @@
-add_library(VkLib main.cpp)
+# 
+add_library(VkLib
+    STATIC
+    VkLib/VkLib.h
+    VkLib/VkLib.cpp
+    )
