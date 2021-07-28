@@ -1,3 +1,5 @@
+#include <cstdint>
+
 
 namespace VkLib {
     constexpr int VK_SUCCESS = 0;
@@ -6,14 +8,14 @@ namespace VkLib {
     /**
      * @brief VkLib Initilize
      * 
-     * @return int (0: SUCCESS, other: ERRORCODE)
+     * @return int32_t (0: SUCCESS, other: ERRORCODE)
      */
-    int Initialize();
+    int32_t VkLib_Init();
 
     /**
      * @brief VkLib Finalize
      * 
-     * @return int (0: SUCCESS, other: ERRORCODE)
+     * @return int32_t (0: SUCCESS, other: ERRORCODE)
      */
-    int Finalize();
+    int32_t VkLib_End();
 }

@@ -1,11 +1,12 @@
 #include "VkLib.h"
 
 namespace VkLib {
-    int Initialize() {
+    int32_t VkLib_Init() {
+        
         return VK_SUCCESS;
     }
 
-    int Finalize() {
+    int32_t VkLib_End() {
         return VK_SUCCESS;
     }
 }
