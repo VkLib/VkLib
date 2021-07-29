@@ -13,6 +13,13 @@ namespace VkLib {
     int32_t VkLib_Init();
 
     /**
+     * @brief 
+     * 
+     * @return int32_t 
+     */
+    int32_t ProcessMessage();
+
+    /**
      * @brief VkLib Finalize
      * 
      * @return int32_t (0: SUCCESS, other: ERRORCODE)
