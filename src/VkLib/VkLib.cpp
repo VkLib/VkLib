@@ -9,7 +9,7 @@ namespace VkLib {
     }
 
     int32_t VkLib_End() {
-        return VK_SUCCESS;
+        return 0;
     }
 }
 
