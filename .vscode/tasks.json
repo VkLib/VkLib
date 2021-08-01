@@ -2,12 +2,44 @@
 	"version": "2.0.0",
 	"tasks": [
 		{
-			"type": "cppbuild",
-			"label": "C/C++: gcc.exe",
-			"command": "gcc.exe",
+			"label": "g++(x86) for windows VkLib",
+			"command": "g++.exe",
 			"args": [
-                "-g",
+				"-Wall",
+				"${workspaceRoot}/src/VkLib/VkLib.cpp",
+				"${workspaceRoot}/src/VkLib/VkLib.h",
+				//""
+				"-IC:/VulkanSDK/1.2.182.0/Include/",
+				"-LC:/VulkanSDK/1.2.182.0/Lib32/",
+				//""
+				"-o",
+				"${workspaceRoot}/bin/x86/Debug/VkLib.dll",
+				// "main.exe",
+				"-lvulkan-1",
+				"-shared",
+				"-Wl,--out-implib,${workspaceRoot}/bin/x86/Debug/VkLib.lib"
+			],
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": [
+				"$msCompile"
+			],
+			"group": "build",
+			"detail": ""
+		},
+		{
+			"label": "g++(x86) for windows Sample App",
+			"command": "g++.exe",
+			"args": [
+				"-Wall",
 				"${workspaceRoot}/src/main.cpp",
+				"-I${workspaceRoot}/src/VkLib/",
+				"-L${workspaceRoot}/src/lib/x86/",
+				//""
+				"-o",
+				"${workspaceRoot}/bin/x86/Debug/main.exe",
+				"${workspaceRoot}/src/lib/x86/VkLib.dll",
 			],
 			"options": {
 				"cwd": "${fileDirname}"
