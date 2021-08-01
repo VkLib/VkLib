@@ -1,10 +1,15 @@
-#include "vulkan/vulkan.h"
-#include "vulkan/vulkan_core.h"
+
+#include "VkLib.h"
+
+#include <vulkan/vulkan.h>
+#include <vulkan/vulkan_core.h>
 
 #include <vector>
+#include <cstdio>
 
 namespace VkLib {
     int32_t VkLib_Init() {
+        
         VkResult result;
 
         VkApplicationInfo aInfo;
@@ -40,10 +45,11 @@ namespace VkLib {
     }
 
     int32_t ProcessMessage() {
-        return 0;
+        return -1;
     }
 
     int32_t VkLib_End() {
+        
         return 0;
     }
 }
