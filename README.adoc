@@ -1,16 +1,13 @@
 # VkLib
-VkLib is ...
+VkLib is similar to DxLib.
 
 ## Develop Environment
 
-[cols="1,1"]
-|===
-| Name
-| Version
-
-| Windows SDK
-| 10.0.18362.0
-
-| Vulkan SDK
-| 1.2.170.0
-|===
+## Start up
+### Develop Environment
+#### Windows
+1. Install "Visual Studio Code"
+1. Install "Vulkan SDK (v1.2.182.0) for Windows"
+1. Install "MinGW"
+1. Clone repository.
+1. Build in "Visual Studio Code"
