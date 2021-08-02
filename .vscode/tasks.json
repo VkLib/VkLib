@@ -1,48 +1,31 @@
 {
 	"version": "2.0.0",
+	"inputs": [
+		{
+
+		}
+	],
 	"tasks": [
 		{
-			"label": "g++(x86) for windows VkLib",
-			"command": "g++.exe",
+			"label": "Win: Build VkLib(x86): g++",
+			"command": "C:/MinGW/bin/g++.exe",
 			"args": [
-				"-Wall",
-				"${workspaceRoot}/src/VkLib/VkLib.cpp",
-				"${workspaceRoot}/src/VkLib/VkLib.h",
-				//""
+				// src
+				"${workspaceRoot}/src/VkLib/**",
+				// reference "Vulkan SDK"
 				"-IC:/VulkanSDK/1.2.182.0/Include/",
 				"-LC:/VulkanSDK/1.2.182.0/Lib32/",
-				//""
+				// output
 				"-o",
 				"${workspaceRoot}/bin/x86/Debug/VkLib.dll",
-				// "main.exe",
+				// linker
 				"-lvulkan-1",
+				// output for import library
 				"-shared",
 				"-Wl,--out-implib,${workspaceRoot}/bin/x86/Debug/VkLib.lib"
 			],
 			"options": {
-				"cwd": "${fileDirname}"
-			},
-			"problemMatcher": [
-				"$msCompile"
-			],
-			"group": "build",
-			"detail": ""
-		},
-		{
-			"label": "g++(x86) for windows Sample App",
-			"command": "g++.exe",
-			"args": [
-				"-Wall",
-				"${workspaceRoot}/src/main.cpp",
-				"-I${workspaceRoot}/src/VkLib/",
-				"-L${workspaceRoot}/src/lib/x86/",
-				//""
-				"-o",
-				"${workspaceRoot}/bin/x86/Debug/main.exe",
-				"${workspaceRoot}/src/lib/x86/VkLib.dll",
-			],
-			"options": {
-				"cwd": "${fileDirname}"
+				"cwd": "${workspaceRoot}"
 			},
 			"problemMatcher": [
 				"$msCompile"
