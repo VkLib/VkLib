@@ -10,19 +10,19 @@
 			"label": "Win: Build VkLib(x86): g++",
 			"command": "C:/MinGW/bin/g++.exe",
 			"args": [
-				// src
-				"${workspaceRoot}/src/VkLib/**",
+				// source
+				"${workspaceRoot}/VkLib/src/**",
 				// reference "Vulkan SDK"
 				"-IC:/VulkanSDK/1.2.182.0/Include/",
 				"-LC:/VulkanSDK/1.2.182.0/Lib32/",
 				// output
 				"-o",
-				"${workspaceRoot}/bin/x86/Debug/VkLib.dll",
+				"${workspaceRoot}/VkLib/bin/x86/Debug/VkLib.dll",
 				// linker
 				"-lvulkan-1",
 				// output for import library
 				"-shared",
-				"-Wl,--out-implib,${workspaceRoot}/bin/x86/Debug/VkLib.lib"
+				"-Wl,--out-implib,${workspaceRoot}/kLib/bin/x86/Debug/VkLib.lib"
 			],
 			"options": {
 				"cwd": "${workspaceRoot}"
