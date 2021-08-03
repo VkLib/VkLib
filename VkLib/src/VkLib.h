@@ -22,9 +22,9 @@ namespace VkLib {
     int32_t VkLib_Init();
 
     /**
-     * @brief 
+     * @brief Process message.
      * 
-     * @return int32_t 
+     * @return int32_t 0: SUCCESS, other: FAILED
      */
     int32_t ProcessMessage();
 
