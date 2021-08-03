@@ -4,7 +4,7 @@
 	],
 	"tasks": [
 		{
-			"label": "Win: Build VkLib(x86): g++",
+			"label": "Win: Compile VkLib_x86-Debug: g++",
 			"command": "../batch/Compile-VkLib_x86-Debug.bat",
 			"args": [
 			],
@@ -19,7 +19,7 @@
 		},
 		
 		{
-			"label": "Win: Checker(x86): g++",
+			"label": "Win: Checker_x86-Debug: g++",
 			"command": "../batch/Compile-VkLibCheck_x86-Debug.bat",
 			"args": [
 			],
