@@ -1,9 +1,6 @@
 {
 	"version": "2.0.0",
 	"inputs": [
-		{
-
-		}
 	],
 	"tasks": [
 		{
@@ -23,6 +20,25 @@
 				// output for import library
 				"-shared",
 				"-Wl,--out-implib,${workspaceRoot}/kLib/bin/x86/Debug/VkLib.lib"
+			],
+			"options": {
+				"cwd": "${workspaceRoot}"
+			},
+			"problemMatcher": [
+				"$msCompile"
+			],
+			"group": "build",
+			"detail": ""
+		},
+		
+		{
+			"label": "Win: Checker(x86): g++",
+			"command": "C:/MinGW/bin/g++.exe",
+			"args": [
+				// source
+				"${workspaceRoot}/VkLibCheck/src/**",
+				"-o",
+				"${workspaceRoot}/VkLibCheck/bin/x86/Debug/VkLib.dll",
 			],
 			"options": {
 				"cwd": "${workspaceRoot}"
