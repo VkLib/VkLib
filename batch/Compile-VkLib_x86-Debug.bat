@@ -1,6 +1,8 @@
 ::variables
 set VULKAN_VERSION=1.2.182.0
 
+chcp 65001
+
 cd ..
 mkdir "VkLib/bin/x86/Debug"
 C:/MinGW/Bin/g++.exe VkLib/src/** ^

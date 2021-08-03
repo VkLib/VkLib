@@ -1,3 +1,5 @@
+chcp 65001
+
 cd ..
 mkdir "VkLibCheck/bin/x86/Debug"
 copy ".\VkLib\bin\x86\Debug\VkLib.dll" "VkLibCheck/bin/x86/Debug/VkLib.dll"
