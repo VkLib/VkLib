@@ -14,6 +14,7 @@ VkLib is similar to DxLib.
 
 1. Install https://code.visualstudio.com/download["Visual Studio Code"]
 1. Install https://vulkan.lunarg.com/sdk/home["Vulkan SDK v{vulkan-version} for Windows"]
+1. Install https://www.glfw.org/download.html["GLFW 32-bit"]
 1. Install https://sourceforge.net/projects/mingw/["MinGW"]
  
 1. Clone this repository.
