@@ -32,7 +32,18 @@ namespace VkLib {
         result = vkCreateInstance(&cinfo, nullptr, &instance);
 
         if(result != VK_SUCCESS) {
-            return -1;
+            switch(result) {
+                case VK_ERROR_EXTENSION_NOT_PRESENT:
+                {
+                    return -2;
+                }
+                break;
+                default:
+                {
+                    return -1;
+                }
+                break;
+            }
         }
 
         uint32_t physicalDeviceArraySize;
