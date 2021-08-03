@@ -6,8 +6,8 @@ VkLib is similar to DxLib.
 ## Start up
 ### Develop Environment
 #### Windows
-1. Install "Visual Studio Code"
-1. Install "Vulkan SDK (v1.2.182.0) for Windows"
-1. Install "MinGW"
-1. Clone repository.
-1. Build in "Visual Studio Code"
+1. Install https://code.visualstudio.com/download["Visual Studio Code"]
+1. Install https://vulkan.lunarg.com/sdk/home["Vulkan SDK v1.2.182.0 for Windows"]
+1. Install https://sourceforge.net/projects/mingw/["MinGW"]
+ 
+1. Clone this repository.
