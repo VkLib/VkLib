@@ -14,24 +14,31 @@ namespace VkLib {
 
     constexpr int VK_SUCCESS = 0;
 
-    constexpr int VK_IMAGE_NUM = 65535;
-
     /**
+     * @if ja-JP
+     * @brief VkLib 初期化処理
+     * 
+     * @return int32_t 0: 成功, その他: エラーコード
+     * @endif
+     * 
+     * 
+     * @if en-US
      * @brief VkLib Initilize
      * 
-     * @return int32_t (0: SUCCESS, other: ERRORCODE)
+     * @return int32_t 0: SUCCESS, other: ERRORCODE
+     * @endif
      */
     int32_t VkLib_Init();
 
     /**
      * @brief VkLib Finalize
      * 
-     * @return int32_t (0: SUCCESS, other: ERRORCODE)
+     * @return int32_t 0: SUCCESS, other: ERRORCODE
      */
     int32_t VkLib_End();
 
     /**
-     * @brief Process message.
+     * @brief Execute process message
      * 
      * @return int32_t 0: SUCCESS, other: FAILED
      */
@@ -40,16 +47,16 @@ namespace VkLib {
     /**
      * @brief Set the Window Title object
      * 
-     * @param title 
-     * @return int32_t 
+     * @param pTitle タイトル
+     * @return int32_t 0: SUCCESS, other: FAILED
      */
-    int32_t SetWindowTitle(const TCHAR* title);
+    int32_t SetWindowTitle(const TCHAR* pTitle);
 
     /**
      * @brief Set the Out Application Log Valid Flag object
      * 
      * @param flag 
-     * @return int32_t 
+     * @return int32_t 0: SUCCESS, other: FAILED
      */
     int32_t SetOutApplicationLogValidFlag(int32_t flag);
 }
