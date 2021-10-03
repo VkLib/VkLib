@@ -197,7 +197,7 @@ namespace VkLib {
 
         VkInstanceCreateInfo cinfo;
         cinfo.sType = VK_STRUCTURE_TYPE_INSTANCE_CREATE_INFO;
-        cinfo.pNext = nullptr;
+        cinfo.pNext = nullptr;  
         cinfo.flags = 0;
         cinfo.pApplicationInfo = &aInfo;
         cinfo.enabledExtensionCount = extensions.size();
@@ -267,30 +267,30 @@ namespace VkLib {
         isInitialized = false;
         return 0;
     }
-
-
-    /////////////////////////////////
-    // Graphics
-    /////////////////////////////////
-    
-    /**
-     * @if ja-JP
-     * @brief 画像ファイルをロードする
-     * 
-     * @param pFilePath ファイルパス
-     * @return int32_t 1以上: 画像ハンドル, -1: 読込失敗
-     * @endif
-     */
-    int32_t LoadGraph(const char* pFilePath);
-
-    /**
-     * @brief 画像を描画する
-     * 
-     * @param x X座標
-     * @param y Y座標
-     * @param handle 画像ハンドル
-     * @return int32_t 
-     */
-    int32_t DrawGraph(int x, int y, int handle);
 }
 
+DllExport int32_t DxLib_Init()
+{
+    // GLFW初期化
+    glfwInit();
+    glfwWindowHint(GLFW_CLIENT_API, GLFW_NO_API);
+    glfwWindowHint(GLFW_RESIZABLE, manage.GetResizable());
+
+    // TODO: ウィンドウがここで表示されてしまうため、
+    // 今後線宣言場所を変更する。
+    window = glfwCreateWindow(960, 540, manage.GetWindowTitle(), nullptr, nullptr);
+    return TRUE;
+}
+
+int32_t ProcessMessage()
+{
+    glfwPollEvents();
+
+    return glfwWindowShouldClose(window);
+}
+
+int32_t DxLib_End()
+{
+    glfwTerminate();
+    return TRUE;
+}
