@@ -14,7 +14,8 @@ set(HEADERS
 )
 
 set(SOURCES
-    src/VkLib.cpp
+    src/VkLib.cpp 
+    src/VkGraphics.cpp
 )
 
 source_group("Header Files" FILES ${HEADERS})
