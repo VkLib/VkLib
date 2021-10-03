@@ -1,4 +1,4 @@
-#include "../../VkLib/src/VkLib.h"
+#include <VkLib.h>
 
 using namespace VkLib;
 
@@ -9,7 +9,7 @@ using namespace VkLib;
 int main(void) {
     int32_t ret = 0;
 
-    ret = VkLib_Init();
+    ret = DxLib_Init();
 
     if(ret != 0) {
         printf("%s(): %d", str(VkLib_Init),ret);
@@ -19,7 +19,7 @@ int main(void) {
         
     }
 
-    VkLib_End();
+    DxLib_End();
 
     return 0;
 }
