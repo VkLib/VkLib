@@ -3,3 +3,5 @@ bin/
 VkLib/build/
 VkLib/.vs/
 VkLib/x64/Debug/
+VkLibCheck/build/
+build/
