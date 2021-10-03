@@ -2,12 +2,17 @@
 
 #include <filesystem>
 
+namespace {
+
+}
+
 int32_t LoadGraph(const TCHAR* pFilePath) {
-    constexpr int RESULT_LOAD_FAILED = -1;
+
     namespace fs = std::filesystem;
+    constexpr int RESULT_LOAD_FAILED = -1;
 
     if (!fs::exists(pFilePath)) {
-        return LOAD_FAILED;
+        return RESULT_LOAD_FAILED;
     }
 
     return TRUE;
